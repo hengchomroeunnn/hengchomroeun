@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "EN";
+    font-style: normal;
+    src: url(/assets/fonts/SF-PRO-DISPLAY-MEDIUM.ttf) format("truetype");
+  }
+  @font-face {
+      font-family: "EN-Normal";
+      font-style: normal;
+      src: url(/assets/fonts/SF-PRO.TTF) format("truetype");
+    }
+  @font-face {
+    font-family: "KH";
+    font-style: normal; 
+    font-weight: 400;
+    src: url(/assets/fonts/NIRADEI-REGULAR.OTF) format("truetype");
+  }
+  .kh-font {
+    font-family: 'KH'; /* Font for Khmer */
+  }
+::selection {
+    background: theme('colors.primary'); /* Assuming you have a primary color defined in your Tailwind config */
+    color: white;
+}
