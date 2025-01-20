@@ -5,15 +5,15 @@
       <div class=" my-4">You can reach me anytime.</div>
       <form @submit.prevent="submitForm" class="">
         <div class="form-group mb-6">
-          <label for="name" class="block text-sm font-semibold mb-2">Name:</label>
+          <label for="name" class="block text-sm font-medium mb-2">Name:</label>
           <input type="text" id="name" v-model="form.name" required class="shadow appearance-none border border-gray-100 rounded-2xl w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
         </div>
         <div class="form-group mb-6">
-          <label for="email" class="block text-sm font-semibold mb-2">Email:</label>
+          <label for="email" class="block text-sm font-medium mb-2">Email:</label>
           <input type="email" id="email" v-model="form.email" required class="shadow appearance-none border border-gray-100 rounded-2xl w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
         </div>
         <div class="form-group mb-6">
-          <label for="message" class="block text-sm font-semibold mb-2">Message:</label>
+          <label for="message" class="block text-sm font-medium mb-2">Message:</label>
           <textarea id="message" v-model="form.message" required class="shadow appearance-none border border-gray-100 rounded-2xl w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary h-32"></textarea>
         </div>
         <div class="flex items-center justify-between">

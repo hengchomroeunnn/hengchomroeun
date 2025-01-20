@@ -45,11 +45,12 @@
             >
           </li>
           <li>
-            <button
+            <nuxt-link
+            to="https://drive.google.com/file/d/1xlycwhMmN4B5H3B-g4TG5CKmSLzDBsD8/view?usp=sharing" target="_blank"
               type="button"
               class="bg-primary text-white font-medium py-2 px-4 rounded-full hover:bg-text transition duration-300 ease-in-out">
               Resume
-            </button>
+            </nuxt-link>
           </li>
         </ul>
       </div>
