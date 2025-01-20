@@ -1,5 +1,6 @@
 <template>
-  <div
+  <div>
+    <div
     class="flex flex-col lg:flex-row justify-center items-center py-12 space-y-12 lg:space-y-0 lg:space-x-12">
     <div class="space-y-12 lg:w-1/2">
       <div
@@ -117,4 +118,6 @@
       </div>
     </div>
   </div>
+  </div>
+
 </template>

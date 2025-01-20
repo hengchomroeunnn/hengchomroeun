@@ -1,32 +1,37 @@
 <template>
-  <div class="contact-page container mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6 text-center">Contact Me</h1>
-    <form @submit.prevent="submitForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <div class="form-group mb-4">
-        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-        <input type="text" id="name" v-model="form.name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-      </div>
-      <div class="form-group mb-4">
-        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-        <input type="email" id="email" v-model="form.email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-      </div>
-      <div class="form-group mb-6">
-        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
-        <textarea id="message" v-model="form.message" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
-      </div>
-      <div class="flex items-center justify-between">
-        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
-      </div>
-    </form>
+  <div class="">
+    <div class="contact-page container mx-auto p-6 shadow-lg rounded-lg my-8">
+      <h1 class="text-4xl font-extrabold ">Get in Touch</h1>
+      <div class=" my-4">You can reach me anytime.</div>
+      <form @submit.prevent="submitForm" class="">
+        <div class="form-group mb-6">
+          <label for="name" class="block text-sm font-semibold mb-2">Name:</label>
+          <input type="text" id="name" v-model="form.name" required class="shadow appearance-none border border-gray-100 rounded-2xl w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+        </div>
+        <div class="form-group mb-6">
+          <label for="email" class="block text-sm font-semibold mb-2">Email:</label>
+          <input type="email" id="email" v-model="form.email" required class="shadow appearance-none border border-gray-100 rounded-2xl w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+        </div>
+        <div class="form-group mb-6">
+          <label for="message" class="block text-sm font-semibold mb-2">Message:</label>
+          <textarea id="message" v-model="form.message" required class="shadow appearance-none border border-gray-100 rounded-2xl w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary h-32"></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-6 hover:bg-text rounded-full focus:outline-none focus:ring-2 focus:ring-primary">Send</button>
+        </div>
+        <p v-if="successMessage" class="text-green-500 mt-4">{{ successMessage }}</p>
+        <p v-if="errorMessage" class="text-red-500 mt-4">{{ errorMessage }}</p>
+      </form>
+    </div>
   </div>
 </template>
+
 <script setup>
 import { ref } from 'vue'
 import { createClient } from '@supabase/supabase-js'
-
 const supabase = createClient(
   'https://bwareuaigtfjibehuggt.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3YXJldWFpZ3RmamliZWh1Z2d0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcyMDY0MDYsImV4cCI6MjA1Mjc4MjQwNn0.4nlzWzDZvbiWhUcCVTyRA_v66GdF2t8FEZF-uJTru-I'
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3YXJldWFpZ3RmamliZWh1Z2d0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcyMDY0MDYsImV4cCI6MjA1Mjc4MjQwNn0.4nlzWzDZvbiWhUcCVTyRA_v66GdF2t8FEZF-uJTru-'
 )
 
 const form = ref({
@@ -58,7 +63,6 @@ async function submitForm() {
   }
 }
 </script>
-
 
 <style scoped>
 .contact-page {
