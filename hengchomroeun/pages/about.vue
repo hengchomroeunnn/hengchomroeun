@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="">
-            <div class="grid grid-cols-1 md:grid-cols-2 m-4 md:m-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 m-4 md:m-10 space-x-10">
                 <div class="flex justify-center w-full">
-                    <div class="w-[128px] md:w-[256px]">
+                    <div class=" max-lg:w-full max-md:w-1/2 max:sm:w-1/3">
                         <img
                             src="../assets/images/smartulpedit.jpg"
                             alt="Heng Chomroeun SmartULP" />

@@ -13,6 +13,18 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/icon"],
   app: {
+    head: {
+      title: "Heng Chomroeun's Portfolio", // Default title
+      meta: [
+        { name: 'description', content: 'This website is overview of my personal self and my works related to design' },
+        { property: 'og:title', content: 'My Portfolio' },
+        { property: 'og:description', content: 'This is where I showcase my works' },
+        { property: 'og:image', content: 'https://hengchomroeun.vercel.app/publicimg.png' },
+        { property: 'og:url', content: 'https://hengchomroeun.vercel.app/' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'en_US' },
+      ],
+    },
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
     scrollBehavior(to: any, from: any, savedPosition: any) {
@@ -23,5 +35,5 @@ export default defineNuxtConfig({
       }
     },
   },
-  
+
 });
