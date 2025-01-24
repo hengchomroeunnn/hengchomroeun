@@ -27,7 +27,7 @@
                         Detail about me?
                         <span>
                             <nuxt-link
-                                to="https://drive.google.com/file/d/1xlycwhMmN4B5H3B-g4TG5CKmSLzDBsD8/view?usp=sharing"
+                                to="https://drive.google.com/file/d/1jEGE7NrVU3SH2Lz17M3DR3MPXQWXz_NJ/view?usp=sharing"
                                 target="_blank"
                                 class="underline italic hover:text-primary"
                                 >Take a look at my CV!</nuxt-link
